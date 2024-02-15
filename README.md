@@ -62,6 +62,10 @@ vc$layout(vconcat(
 vc$widget(theme = "dark")
 ```
 
+### Alternative
+
+Alternativley, the config.json can also be created directly, or by editing from a previous template/example. Can be done in VisualStudio or the Vitessce App directly. If the zarr store (example.h5ad.zarr) is served to a local host (http-server), then the visualisation can be viewed in Vitesssce directly by linking to it in the "url"= of the .json. 
+
 ### Create the GitHub repository
 For where the data will be hosted
 
