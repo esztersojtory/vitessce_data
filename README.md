@@ -74,7 +74,11 @@ vc$export (with_config=TRUE, base_url= '<GitHub_repository_url>', out_dir = './e
 Edit the exported config.JSON to make changes without having to export from R again. Can be tested on the Vitessce App if the .h5ad.zarr is hosted locally on an http-server.
 
 ### Clone to Github
-Clone the export folder to the previously created repository. Ensure that th uploaded config.JSON has the URL that points to the .h5ad.zarr file in the repository. 
+Clone the export folder to the previously created repository. 
+
+### Setup GitHub Pages
+
+Add a blank ```.nojekyll``` file to the root of the repository and set up GitHub Pages from the main branch of the repository where the data was uploaded to. In the config.json, ensure that the URL points to the GitHub pages url (user.github.io/)
 
 ### Vitessce URL
 A shareable Vitessce.io URL can now be generated
