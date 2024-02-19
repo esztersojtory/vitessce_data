@@ -1,0 +1,1362 @@
+{
+  "version": "1.0.16",
+  "name": "My config",
+  "description": "Visualisation based on Fig. 4 from Kirchberger and Shoeb et al. 2024: Trajectory analysis uncovers the underlying cell phases and governing gene molecules. Heatmap showing differentially expressed genes along the maturation projectory (in four distinct phases P1-P4).",
+  "datasets": [
+    {
+      "uid": "A",
+      "name": "My dataset",
+      "files": [
+        {
+          "fileType": "anndata.zarr",
+          "url": "http://127.0.0.1:3000/zfish1.h5ad.zarr",
+          "options": {
+            "obsEmbedding": [
+              {
+                "path": "obsm/X_umap",
+                "embeddingType": "UMAP",
+                "dims": [
+                  0,
+                  1
+                ]
+              }
+            ],
+            "obsSets": [
+              {
+                "path": "obs/Phases",
+                "name": "Maturation phase"
+              },
+              {
+                "path": "obs/pseudotime_bin",
+                "name": "Pseudotime bins"
+              },
+              {
+                "path": "obs/citrin_state",
+                "name": "Neutrophil sorts"
+              },
+              {
+                "path": "obs/Phase",
+                "name": "Cell cycle phase"
+              }
+            ],
+            "obsFeatureMatrix": {
+              "path": "X"
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "coordinationSpace": {
+    "dataset": {
+      "A": "A"
+    },
+    "embeddingType": {
+      "A": "UMAP"
+    },
+    "featureValueColormapRange": {
+      "A": [
+        0.15,
+        0.2
+      ]
+    },
+    "obsSetColor": {
+      "A": [
+        {
+          "path": [
+            "Maturation phase",
+            "P1"
+          ],
+          "color": [
+            219,
+            219,
+            234
+          ]
+        },
+        {
+          "path": [
+            "Maturation phase",
+            "P2"
+          ],
+          "color": [
+            157,
+            154,
+            196
+          ]
+        },
+        {
+          "path": [
+            "Maturation phase",
+            "P3"
+          ],
+          "color": [
+            99,
+            80,
+            153
+          ]
+        },
+        {
+          "path": [
+            "Maturation phase",
+            "P4"
+          ],
+          "color": [
+            57,
+            5,
+            120
+          ]
+        },
+        {
+          "path": [
+            "Neutrophil sorts",
+            "NO"
+          ],
+          "color": [
+            248,
+            225,
+            222
+          ]
+        },
+        {
+          "path": [
+            "Neutrophil sorts",
+            "INT"
+          ],
+          "color": [
+            237,
+            163,
+            181
+          ]
+        },
+        {
+          "path": [
+            "Neutrophil sorts",
+            "HI"
+          ],
+          "color": [
+            204,
+            68,
+            148
+          ]
+        },
+        {
+          "path": [
+            "Neutrophil sorts",
+            "WKM"
+          ],
+          "color": [
+            204,
+            204,
+            204
+          ]
+        },
+        {
+          "path": [
+            "Cell cycle phase",
+            "G1"
+          ],
+          "color": [
+            249,
+            247,
+            182
+          ]
+        },
+        {
+          "path": [
+            "Cell cycle phase",
+            "S"
+          ],
+          "color": [
+            234,
+            146,
+            94
+          ]
+        },
+        {
+          "path": [
+            "Cell cycle phase",
+            "G2M"
+          ],
+          "color": [
+            151,
+            29,
+            43
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "1"
+          ],
+          "color": [
+            0,
+            0,
+            4
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "2"
+          ],
+          "color": [
+            1,
+            1,
+            6
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "3"
+          ],
+          "color": [
+            2,
+            2,
+            12
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "4"
+          ],
+          "color": [
+            4,
+            3,
+            17
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "5"
+          ],
+          "color": [
+            5,
+            4,
+            24
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "6"
+          ],
+          "color": [
+            7,
+            5,
+            29
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "7"
+          ],
+          "color": [
+            9,
+            7,
+            35
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "8"
+          ],
+          "color": [
+            13,
+            8,
+            41
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "9"
+          ],
+          "color": [
+            17,
+            10,
+            47
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "10"
+          ],
+          "color": [
+            20,
+            11,
+            53
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "11"
+          ],
+          "color": [
+            24,
+            13,
+            58
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "12"
+          ],
+          "color": [
+            27,
+            12,
+            66
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "13"
+          ],
+          "color": [
+            32,
+            12,
+            72
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "14"
+          ],
+          "color": [
+            35,
+            12,
+            77
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "15"
+          ],
+          "color": [
+            41,
+            11,
+            82
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "16"
+          ],
+          "color": [
+            44,
+            11,
+            88
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "17"
+          ],
+          "color": [
+            49,
+            10,
+            92
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "18"
+          ],
+          "color": [
+            54,
+            8,
+            97
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "19"
+          ],
+          "color": [
+            58,
+            9,
+            99
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "20"
+          ],
+          "color": [
+            62,
+            10,
+            102
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "21"
+          ],
+          "color": [
+            67,
+            10,
+            104
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "21"
+          ],
+          "color": [
+            71,
+            10,
+            106
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "22"
+          ],
+          "color": [
+            75,
+            13,
+            107
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "23"
+          ],
+          "color": [
+            80,
+            13,
+            108
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "24"
+          ],
+          "color": [
+            84,
+            15,
+            109
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "25"
+          ],
+          "color": [
+            88,
+            16,
+            110
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "26"
+          ],
+          "color": [
+            92,
+            19,
+            110
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "27"
+          ],
+          "color": [
+            96,
+            19,
+            110
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "28"
+          ],
+          "color": [
+            100,
+            21,
+            110
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "29"
+          ],
+          "color": [
+            105,
+            22,
+            110
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "30"
+          ],
+          "color": [
+            108,
+            24,
+            110
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "31"
+          ],
+          "color": [
+            113,
+            26,
+            109
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "32"
+          ],
+          "color": [
+            115,
+            26,
+            109
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "33"
+          ],
+          "color": [
+            120,
+            28,
+            109
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "34"
+          ],
+          "color": [
+            125,
+            30,
+            109
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "35"
+          ],
+          "color": [
+            128,
+            31,
+            108
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "36"
+          ],
+          "color": [
+            133,
+            33,
+            107
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "37"
+          ],
+          "color": [
+            136,
+            33,
+            106
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "38"
+          ],
+          "color": [
+            141,
+            35,
+            105
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "39"
+          ],
+          "color": [
+            145,
+            37,
+            104
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "40"
+          ],
+          "color": [
+            149,
+            38,
+            103
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "41"
+          ],
+          "color": [
+            153,
+            40,
+            102
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "42"
+          ],
+          "color": [
+            157,
+            41,
+            99
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "43"
+          ],
+          "color": [
+            162,
+            42,
+            98
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "44"
+          ],
+          "color": [
+            165,
+            44,
+            96
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "45"
+          ],
+          "color": [
+            169,
+            46,
+            95
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "46"
+          ],
+          "color": [
+            173,
+            48,
+            92
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "47"
+          ],
+          "color": [
+            177,
+            50,
+            90
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "48"
+          ],
+          "color": [
+            181,
+            52,
+            88
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "49"
+          ],
+          "color": [
+            185,
+            54,
+            86
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "50"
+          ],
+          "color": [
+            189,
+            56,
+            83
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "51"
+          ],
+          "color": [
+            192,
+            58,
+            81
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "52"
+          ],
+          "color": [
+            196,
+            59,
+            78
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "53"
+          ],
+          "color": [
+            199,
+            63,
+            75
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "54"
+          ],
+          "color": [
+            203,
+            65,
+            73
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "55"
+          ],
+          "color": [
+            207,
+            68,
+            70
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "56"
+          ],
+          "color": [
+            210,
+            70,
+            68
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "57"
+          ],
+          "color": [
+            213,
+            74,
+            65
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "58"
+          ],
+          "color": [
+            216,
+            76,
+            62
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "59"
+          ],
+          "color": [
+            219,
+            81,
+            59
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "60"
+          ],
+          "color": [
+            223,
+            82,
+            54
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "61"
+          ],
+          "color": [
+            228,
+            90,
+            50
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "62"
+          ],
+          "color": [
+            230,
+            93,
+            46
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "63"
+          ],
+          "color": [
+            233,
+            96,
+            44
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "64"
+          ],
+          "color": [
+            235,
+            101,
+            41
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "65"
+          ],
+          "color": [
+            237,
+            105,
+            36
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "66"
+          ],
+          "color": [
+            239,
+            108,
+            35
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "67"
+          ],
+          "color": [
+            241,
+            113,
+            31
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "68"
+          ],
+          "color": [
+            243,
+            117,
+            27
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "69"
+          ],
+          "color": [
+            244,
+            121,
+            25
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "70"
+          ],
+          "color": [
+            247,
+            126,
+            19
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "71"
+          ],
+          "color": [
+            247,
+            131,
+            16
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "72"
+          ],
+          "color": [
+            248,
+            135,
+            16
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "73"
+          ],
+          "color": [
+            249,
+            140,
+            12
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "74"
+          ],
+          "color": [
+            250,
+            144,
+            6
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "75"
+          ],
+          "color": [
+            251,
+            150,
+            3
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "76"
+          ],
+          "color": [
+            250,
+            155,
+            3
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "77"
+          ],
+          "color": [
+            252,
+            159,
+            8
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "78"
+          ],
+          "color": [
+            252,
+            164,
+            11
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "79"
+          ],
+          "color": [
+            252,
+            168,
+            11
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "80"
+          ],
+          "color": [
+            252,
+            173,
+            20
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "81"
+          ],
+          "color": [
+            252,
+            178,
+            22
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "82"
+          ],
+          "color": [
+            251,
+            184,
+            27
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "83"
+          ],
+          "color": [
+            251,
+            189,
+            35
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "84"
+          ],
+          "color": [
+            250,
+            194,
+            40
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "85"
+          ],
+          "color": [
+            249,
+            199,
+            46
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "86"
+          ],
+          "color": [
+            249,
+            203,
+            52
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "87"
+          ],
+          "color": [
+            247,
+            209,
+            59
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "88"
+          ],
+          "color": [
+            247,
+            213,
+            68
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "89"
+          ],
+          "color": [
+            245,
+            219,
+            74
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "90"
+          ],
+          "color": [
+            244,
+            224,
+            84
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "91"
+          ],
+          "color": [
+            244,
+            229,
+            93
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "92"
+          ],
+          "color": [
+            242,
+            233,
+            103
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "93"
+          ],
+          "color": [
+            241,
+            237,
+            113
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "94"
+          ],
+          "color": [
+            242,
+            242,
+            124
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "95"
+          ],
+          "color": [
+            243,
+            245,
+            135
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "96"
+          ],
+          "color": [
+            245,
+            249,
+            145
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "97"
+          ],
+          "color": [
+            249,
+            251,
+            155
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "98"
+          ],
+          "color": [
+            253,
+            255,
+            164
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "99"
+          ],
+          "color": [
+            253,
+            256,
+            169
+          ]
+        },
+        {
+          "path": [
+            "Pseudotime bins",
+            "100"
+          ],
+          "color": [
+            254,
+            257,
+            175
+          ]
+        }
+      ]
+    }
+  },
+  "layout": [
+    {
+      "component": "obsSets",
+      "h": 4,
+      "w": 4,
+      "x": 4,
+      "y": 0,
+      "coordinationScopes": {
+        "dataset": "A",
+        "obsSetColor": "A"
+      }
+    },
+    {
+      "component": "obsSetSizes",
+      "h": 4,
+      "w": 4,
+      "x": 8,
+      "y": 0,
+      "coordinationScopes": {
+        "dataset": "A",
+        "obsSetColor": "A"
+      }
+    },
+    {
+      "component": "scatterplot",
+      "h": 4,
+      "w": 4,
+      "x": 0,
+      "y": 0,
+      "coordinationScopes": {
+        "embeddingType": "A",
+        "dataset": "A",
+        "featureValueColormapRange": "A",
+        "obsSetColor": "A"
+      }
+    },
+    {
+      "component": "heatmap",
+      "h": 4,
+      "w": 10,
+      "x": 0,
+      "y": 4,
+      "coordinationScopes": {
+        "featureValueColormapRange": "A",
+        "obsLabelsType": [
+          "A"
+        ],
+        "obsSetColor": "A"
+      },
+      "props": {
+        "transpose": true
+      }
+    },
+    {
+      "component": "description",
+      "h": 4,
+      "w": 2,
+      "x": 10,
+      "y": 4
+    }
+  ],
+  "initStrategy": "auto"
+}
