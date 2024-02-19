@@ -9,7 +9,7 @@
       "files": [
         {
           "fileType": "anndata.zarr",
-          "url": "https://esztersojtory.github.io/vitessce_data/zfish.h5ad.zarr",
+          "url": "https://esztersojtory.github.io/vitessce_data/zfish1.h5ad.zarr",
           "options": {
             "obsEmbedding": [
               {
