@@ -1,5 +1,7 @@
 # Transform Seurat object to zarr store in R
 
+The following instructions detail process of creating a custom Vitessce visualisation from a Seurat object.
+
 ## Installation
 
 Installation requires R 4.0.0 or greater.
@@ -29,17 +31,38 @@ adata_path <- file.path("data", "example", "example.h5ad.zarr")
 vitessceAnalysisR::seurat_to_anndata_zarr(so, adatapath)
 ```
 
-## Create the GitHub repository
+# Data Hosting
 
-For where the data will be hosted.
+## Static Web Servers
 
-## Clone to Github
+### GitHub Pages
 
-Clone the export folder (.h5ad.zarr) to the previously created repository. 
+- Create the GitHub repository where the data will be hosted.
+- Clone the export folder (.h5ad.zarr) to the previously created repository.
+- Add a blank ```.nojekyll``` file to the root of the repository.
+- Set up GitHub Pages, from the Settings tab of the repository, from the  branch of the repository where the data was uploaded to.
 
-## Setup GitHub Pages
+### Other Alternatives
 
-Add a blank ```.nojekyll``` file to the root of the repository and set up GitHub Pages, from the Settings tab of the repository, from the  branch of the repository where the data was uploaded to. 
+The data can also be hosted on other static web servers such as AWS S3 buckets or Google Cloud, which could be necesary for particularly large directories. However, these are paid services at such file size and in most cases GitHub Pages should work. The specific bucket policies for these can be found on the [Vitessce Website](http://vitessce.io/docs/data-hosting/).
+
+## Local Files
+
+Local hosting allows for the visualisation of not yet published data.
+To serve data locally, any web server that can serve a directory should work, but Vitessce recommend http-server, which can be installed with Homebrew (on macOS) or NPM:
+
+```
+brew install http-server
+```
+```
+npm install --global http-server
+```
+
+Then, navigate to the data directory and run the server:
+
+```
+http-server ./ --cors -p 9000
+```
 
 # Create Vitessce config
 
@@ -50,7 +73,7 @@ The config.json can be created from scratch, or by editing from a previous templ
 - linking of visualisation parameters across views
 - other design choices (colours, layout etc)
 
-The following steps walk through the construction of the config, but it often might be easier to just edit a preexisting one. 
+The following steps walk through the construction of the config, but it often might be easier to edit/adjust a preexisting one. 
 
 ### Header
 
@@ -116,7 +139,7 @@ The value for "dims" must be a tuple that specifies which dimensions of the dime
             ],
 ```
 
-The Feature matrix is automatically exported to the "X" folder from the Seurat object
+The Feature matrix is automatically exported to the "X" folder from the Seurat object.
 
 ```
             "obsFeatureMatrix": {
@@ -134,7 +157,8 @@ The Feature matrix is automatically exported to the "X" folder from the Seurat o
 The "coordinationSpace" is the container for all coordination objects in a visualization system. 
 The "embeddingType" defines the type for the scatterplot.
 The featureValueColormapRange defines the expression range for the heatmap component.
-The obsSetColor allows the addition of custom colours to each obsSet variable. At the time of writing, if one colour is specified, all others will be automatically set to grey, so if one needs to be customised then all the others have to be as well. The makers of Vitessce have announced that Colour Maps are coming, where the individual colours will no longer have to be specified with an RGB value.
+The obsSetColor allows the addition of custom colours to each obsSet variable. At the time of writing, if one colour is specified, all others will be automatically set to grey, so if one needs to be customised then all the others have to be as well. 
+The makers of Vitessce have announced that Colour Maps are coming, where the individual colours will no longer have to be specified with an RGB value, but it has not yet been implemented.
 
 ```
   "coordinationSpace": {
