@@ -24,7 +24,7 @@
             "obsSets": [
               {
                 "path": "obs/citrin_state",
-                "name": "Neutrophil sorts (citrin state)"
+                "name": "Sorts (mmp9 expression)"
               },
               {
                 "path": "obs/ref1_neut_sub",
@@ -36,7 +36,7 @@
               },
               {
                 "path": "obs/Phase",
-                "name": "Cell Cycle phase"
+                "name": "Cell Cycle Phase"
               }
             ],
             "obsFeatureMatrix": {
@@ -64,7 +64,7 @@
       "A": [
         {
           "path": [
-            "Neutrophil sorts (citrin state)",
+            "Sorts (mmp9 expression)",
             "NO"
           ],
           "color": [
@@ -75,7 +75,7 @@
         },
         {
           "path": [
-            "Neutrophil sorts (citrin state)",
+            "Sorts (mmp9 expression)",
             "INT"
           ],
           "color": [
@@ -86,7 +86,7 @@
         },
         {
           "path": [
-            "Neutrophil sorts (citrin state)",
+            "Sorts (mmp9 expression)",
             "HI"
           ],
           "color": [
@@ -97,7 +97,7 @@
         },
         {
           "path": [
-            "Neutrophil sorts (citrin state)",
+            "Sorts (mmp9 expression)",
             "WKM"
           ],
           "color": [
@@ -152,7 +152,7 @@
         },
         {
           "path": [
-            "Cell Cycle phase",
+            "Cell Cycle Phase",
             "G1"
           ],
           "color": [
@@ -163,7 +163,7 @@
         },
         {
           "path": [
-            "Cell Cycle phase",
+            "Cell Cycle Phase",
             "S"
           ],
           "color": [
@@ -174,7 +174,7 @@
         },
         {
           "path": [
-            "Cell Cycle phase",
+            "Cell Cycle Phase",
             "G2M"
           ],
           "color": [
