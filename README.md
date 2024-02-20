@@ -24,7 +24,7 @@ library(vitessceR)
 library(vitessceAnalysisR)
 ```
 
-Transform to zarr store:
+Transform to zarr store (.h5ad.zarr) (making sure that the adatapath directory exists prior to running):
 
 ```r
 adata_path <- file.path("data", "example", "example.h5ad.zarr")
@@ -37,19 +37,19 @@ vitessceAnalysisR::seurat_to_anndata_zarr(so, adatapath)
 
 ### GitHub Pages
 
-- Create the GitHub repository where the data will be hosted.
-- Clone the export folder (.h5ad.zarr) to the previously created repository.
-- Add a blank ```.nojekyll``` file to the root of the repository.
-- Set up GitHub Pages, from the Settings tab of the repository, from the  branch of the repository where the data was uploaded to.
+1. Create the GitHub repository where the data will be hosted.
+2. Clone the export folder (.h5ad.zarr) to the previously created repository.
+3. Add a blank ```.nojekyll``` file to the root of the repository.
+4. Set up GitHub Pages, from the Settings tab, from the  branch of the repository where the data was uploaded to.
 
 ### Other Alternatives
 
-The data can also be hosted on other static web servers such as AWS S3 buckets or Google Cloud, which could be necesary for particularly large directories. However, these are paid services at such file size and in most cases GitHub Pages should work. The specific bucket policies for these can be found on the [Vitessce Website](http://vitessce.io/docs/data-hosting/).
+The data can also be hosted on other static web servers such as AWS S3 buckets or Google Cloud, which could be necesary for particularly large files. However, these are paid services at such file size and in most cases GitHub Pages should work. The specific bucket policies for AWS and Google Cloud can be found on the [Vitessce Website](http://vitessce.io/docs/data-hosting/).
 
 ## Local Files
 
 Local hosting allows for the visualisation of not yet published data.
-To serve data locally, any web server that can serve a directory should work, but Vitessce recommend http-server, which can be installed with Homebrew (on macOS) or NPM:
+To serve data locally, any web server that can serve a directory should work, but Vitessce recommend http-server:
 
 ```
 brew install http-server
@@ -66,14 +66,17 @@ http-server ./ --cors -p 9000
 
 # Create Vitessce config
 
-The config.json can be created from scratch, or by editing from a previous template/example. The Vitessce configuration will specify:
+The config.json can be created from scratch, or by editing a previous template/example. This Vitessce configuration will specify:
 
-- The dataset that should be visualised
-- The visualisation types of interest
-- linking of visualisation parameters across views
-- other design choices (colours, layout etc)
+- The dataset
+- The visualisation types (widgets)
+- Linking of visualisation parameters across views
+- Other design choices (colours, layout etc)
 
 The following steps walk through the construction of the config, but it often might be easier to edit/adjust a preexisting one. 
+
+The configs for the datasets in this repository are in the .h5ad.zarr directory.
+Furthermore, more example configs are available on the [Vitessce Website](http://vitessce.io/examples/), by selecting an example and clicking "Edit" in the top right corner.
 
 ### Header
 
@@ -86,7 +89,7 @@ The following steps walk through the construction of the config, but it often mi
 
 ### Linking the Datasets
 
-The url should point to the example.h5ad.zarr folder, whether it is served locally (through an http-server) or online (Ex: through GitHub Pages). 
+The url should point to the example.h5ad.zarr folder, whether it is served locally (through http-server) or online (through GitHub Pages). 
 
 ```
   "datasets": [
@@ -99,8 +102,8 @@ The url should point to the example.h5ad.zarr folder, whether it is served local
           "url": "<GitHub_repository_url>/example.h5ad.zarr",
 ```
 
-The options part of the file definition above is specific to the anndata-cells.zarr file type. The value for "path" must be pointing to an array in the Zarr store. 
-The embeddingType coordination object is a coordination type because it allows us to coordinate which scatterplots should be displaying the same dimensionality reduction (PCA or UMAP).
+The "options" part of the file definition above is specific to the anndata-cells.zarr file type. The value for "path" must be pointing to an array in the Zarr store. 
+The embeddingType coordination object is a coordination type as it allows us to coordinate which scatterplots should be displaying the same dimensionality reduction (PCA or UMAP).
 The value for "dims" must be a tuple that specifies which dimensions of the dimensionality reduction array to use for the [X, Y] axes of the scatterplot.
 
 ```
@@ -116,7 +119,7 @@ The value for "dims" must be a tuple that specifies which dimensions of the dime
               }
             ],
 ```
-"obsSets" in the options defines the metadata that we want to display on the plots. These will be listed under the "Cell Sets" widget if we add one later on. 
+"obsSets" in the options defines the metadata that is to be displayed. These will be listed under the "Cell Sets" widget. 
 
 ```
             "obsSets": [
@@ -157,8 +160,8 @@ The Feature matrix is automatically exported to the "X" folder from the Seurat o
 The "coordinationSpace" is the container for all coordination objects in a visualization system. 
 The "embeddingType" defines the type for the scatterplot.
 The featureValueColormapRange defines the expression range for the heatmap component.
-The obsSetColor allows the addition of custom colours to each obsSet variable. At the time of writing, if one colour is specified, all others will be automatically set to grey, so if one needs to be customised then all the others have to be as well. 
-The makers of Vitessce have announced that Colour Maps are coming, where the individual colours will no longer have to be specified with an RGB value, but it has not yet been implemented.
+The obsSetColor allows the addition of custom colours to each obsSet variable. At the time of writing, if one colour is specified, all others will be automatically set to grey, so they all have to be explicitely specified. 
+The makers of Vitessce have communicated that a Colour Maps feature is going to be released, where the individual colours will no longer have to be specified with an RGB value, but it has not yet been implemented.
 
 ```
   "coordinationSpace": {
@@ -303,8 +306,8 @@ The makers of Vitessce have announced that Colour Maps are coming, where the ind
 ```
 ### Layout
 
-The "layout" defines the layout of the configuration. One section for each required widget. 
-The canvas is 12x12, "x" and "y" define the coordinates of the left upper corner of the widget, whereas "w" and "h", the width and the height respectively.
+The "layout" defines the layout of the widgets on the 12x12 canvas.
+The "x" and "y" define the coordinates of the left upper corner of the widget, whereas "w" and "h", the width and the height respectively.
 
 ```
   "layout": [
@@ -371,12 +374,9 @@ The canvas is 12x12, "x" and "y" define the coordinates of the left upper corner
 }
 ```
 
-The configs for the datasets in this repository are in the .h5ad.zarr directory.
-More example configs are available on the [Vitessce Website](http://vitessce.io/examples/), by selecting an example and clicking "Edit" in the top right corner.
-
 ## Upload JSON
 
-Upload the JSON to the GitHub Page. Ensure that the URL points to the .h5ad.zarr directory in the GitHub pages  (user.github.io/example/example.h5ad.zarr)
+If the data is hosted on GitHub, ipload the JSON as well. Ensure that the URL in the config.JSON points to the .h5ad.zarr directory in the GitHub Page (user.github.io/example/example.h5ad.zarr).
 
 # Vitessce URL
 A shareable Vitessce.io URL can now be generated by following this template.
@@ -386,7 +386,7 @@ A shareable Vitessce.io URL can now be generated by following this template.
 
 # Alternatively
 
-Alternatively, the config can also be created in R (or in Python) and the widgets can be launched in the R environment directly. This does not have many benefits appart from the fact that it does not require a local server, it can access the zarr file directly.
+Alternatively, the config can also be created in R (or in Python) and the widgets can be launched in the R environment directly. This does not have many benefits appart from the fact that it does not require the data to be served.
 Either way, the steps are very similar to the JSON format:
 
 Configure the vitessce config:
@@ -437,13 +437,13 @@ vc$layout(vconcat(
 ))
 ```
 
-Render the Vitessce widgets:
+Render the Vitessce widgets direclty in R:
 
 ```r
 vc$widget(theme = "dark")
 ```
 
-Export the Vitessce config, which then can be uploaded or copied to the Vitessce App directly. Optionally: Edit the exported config.JSON to make changes without having to export from R again.
+Or the config can also be exported, which then can be uploaded or copied to the Vitessce App directly. Optionally: The exported config.JSON can be edited after the export without having to export from R again.
 
 ```r
 vc$export (with_config=TRUE, base_url= '<GitHub_repository_url>', out_dir = './export_zfish
