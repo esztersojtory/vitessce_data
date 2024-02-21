@@ -73,7 +73,7 @@ The config.json can be created from scratch, or by editing a previous template/e
 - Linking of visualisation parameters across views
 - Other design choices (colours, layout etc)
 
-The following steps walk through the construction of the config, but it often might be easier to edit/adjust a preexisting one. 
+**The following steps walk through the construction of the config, but it often might be easier to edit/adjust a preexisting one.**
 
 The configs for the datasets in this repository are in the .h5ad.zarr directory.
 Furthermore, more example configs are available on the [Vitessce Website](http://vitessce.io/examples/), by selecting an example and clicking "Edit" in the top right corner.
