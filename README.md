@@ -1,3 +1,19 @@
+# In a Glimpse
+
+This page aims to simplify the process of transforming a Seurat object to a Vitessce visualisation. 
+
+Starting File: Processed and Analysed Seurat Object
+
+Steps:
+1. Transform to Zarr store
+2. Data hosting (on GitHub Pages or locally)
+3. Constructing the config
+4. Uploading config to the Vitessce App
+
+The most time-consuming / confusing part of the process is constructing the config for the layout of the widgets, so it is highly encouraged to copy and edit a pre-existing file. These can be found in this repository in the .h5ad.zarr directory. More example configs are available on the [Vitessce Website](http://vitessce.io/examples/), by selecting an example and clicking "Edit" in the top right corner.
+
+Final Product: Interactive Vitessce Visualisation accessible on the web (if data is hosted publicaly)
+
 # Transform Seurat object to zarr store in R
 
 The following instructions detail process of creating a custom Vitessce visualisation from a Seurat object.
@@ -74,9 +90,6 @@ The config.json can be created from scratch, or by editing a previous template/e
 - Other design choices (colours, layout etc)
 
 **The following steps walk through the construction of the config, but it often might be easier to edit/adjust a preexisting one.**
-
-The configs for the datasets in this repository are in the .h5ad.zarr directory.
-Furthermore, more example configs are available on the [Vitessce Website](http://vitessce.io/examples/), by selecting an example and clicking "Edit" in the top right corner.
 
 ### Header
 
