@@ -10,7 +10,7 @@ Starting File: Processed and Analysed Seurat Object
 3. Create a config in the Vitessce App + customise as needed
 4. Uploading config.JSON to GitHub to create a unique URL
 
-Final Product: Interactive Vitessce Visualisation accessible on the web (if data is hosted publicaly)
+Final Product: Interactive Vitessce Visualisation accessible on the web (if data is hosted publicly).
 
 # Transform Seurat object to zarr store in R
 
