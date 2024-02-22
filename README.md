@@ -88,7 +88,7 @@ The config.json can be created from scratch, or by editing a previous template/e
 - Linking of visualisation parameters across views
 - Other design choices (colours, layout etc)
 
-The Vitessce App provides basic configs. These can be accessed by entering the URL to the zarr the star store in the provided textbox in the Vitessce App. If the URL points to the correct filetype, 6 options will appear to select a view layout for the provided URL. Select one and Load from the Editor. This resulting visualisation can then be customised with the required metadata and additional widgets in the Editor. 
+The Vitessce App provides basic configs. To access these, go the the [Vitessce App](http://vitessce.io/#?edit=true) and paste the URL to the .h5ad.zarr file in the textbox (as shown below). If the URL points to the correct filetype, 6 options will appear to select a view layout for the provided URL. Select one and Load from the Editor. This resulting visualisation can then be customised with the required metadata and additional widgets in the Editor. 
 
 ![Screenshot 2024-02-22 at 11 29 35](https://github.com/esztersojtory/vitessce_data/assets/156802036/e2308f37-7702-48f7-b44b-d525e31c83a9)
 
