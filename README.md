@@ -58,7 +58,7 @@ vitessceAnalysisR::seurat_to_anndata_zarr(so, adatapath)
 
 ### Other Alternatives
 
-The data can also be hosted on other static web servers such as AWS S3 buckets or Google Cloud, which could be necesary for particularly large files. However, these are paid services at such file size and in most cases GitHub Pages should work. The specific bucket policies for AWS and Google Cloud can be found on the [Vitessce Website](http://vitessce.io/docs/data-hosting/).
+The data can also be hosted on other static web servers such as AWS S3 buckets or Google Cloud, which could be necesary for particularly large files. However, in most cases the free GitHub Pages should work fine. The specific bucket policies for AWS and Google Cloud can be found on the [Vitessce Website](http://vitessce.io/docs/data-hosting/).
 
 ## Local Files
 
@@ -77,6 +77,7 @@ Then, navigate to the data directory and run the server:
 ```
 http-server ./ --cors -p 9000
 ```
+If the data is hosted locally, the Vitessce App will not work in Chrome because of the security restrictions on accessing locally hosted files. Easiest is to use a different browser. This is no longer an issue when the files are not hosted locally.
 
 # Create Vitessce config
 
@@ -94,10 +95,13 @@ The Vitessce App provides basic configs. These can be accessed by entering the U
 
 For customisation, I highly recommend copying from examples. The configs that I have created can be found in this repository in the .h5ad.zarr directories. More example configs are available on the [Vitessce Website](http://vitessce.io/examples/), by selecting an example and clicking "Edit" in the top right corner.
 
+### Detailed Instructions
+I have uploaded further detailed instructions for config.JSON customisation as well as for constructing a config in R. These can be found at (STILL NEED TO FINISH THIS, this is where the detailed and potentially overwhelming amoutn of info will go.)
+
 
 ## Upload JSON
 
-If the data is hosted on GitHub, upload the JSON as well. Ensure that the URL in the config.JSON points to the .h5ad.zarr directory in the GitHub Page ([user.github.io/example/example.h5ad.zarr](http://user.github.io/example/example.h5ad.zarr)).
+In order to create a unique URL of the Vitessce visualisation, the config.JSON file needs to be accessible publicly. Easiest is probably the same GitHub directory where the zarr store is. Ensure that the URL in the config.JSON points to the .h5ad.zarr directory in the GitHub Page ([user.github.io/example/example.h5ad.zarr](http://user.github.io/example/example.h5ad.zarr)).
 
 # Vitessce URL
 
