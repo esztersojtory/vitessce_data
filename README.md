@@ -2,6 +2,8 @@
 
 This page aims to simplify the process of transforming a Seurat object to a Vitessce visualisation. 
 
+Vitessce allows the transformation of Seurat objects into interactive visualizations. The process begins with converting the Seurat object into a zarr store, which acts as the foundation for data hosting. Users have the option to host their data on GitHub Pages or locally. Once the data is hosted, users can create a Vitessce configuration JSON file, either from scratch or by modifying a template provided by the Vitessce App. This file specifies the dataset, the visualisation types, the links between them as well as the design choices. After uploading the config JSON file to GitHub, a unique URL is generated, enabling users to access their customized Vitessce visualization. 
+
 Starting File: Processed and Analysed Seurat Object
 
 **Steps:**
