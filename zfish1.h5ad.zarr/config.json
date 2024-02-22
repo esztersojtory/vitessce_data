@@ -1301,13 +1301,24 @@
     {
       "component": "obsSets",
       "h": 4,
-      "w": 4,
+      "w": 2,
       "x": 4,
       "y": 0,
       "coordinationScopes": {
         "dataset": "A",
         "obsSetColor": "A"
       }
+    },
+    {
+      "component": "featureList",
+      "coordinationScopes": {
+        "dataset": "A",
+        "obsSetColor": "A"
+      },
+      "x": 6,
+      "y": 0,
+      "w": 2,
+      "h": 4
     },
     {
       "component": "obsSetSizes",
