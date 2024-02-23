@@ -98,7 +98,7 @@ The Vitessce App provides basic configs. To access these, go the the [Vitessce A
 For customisation, I highly recommend copying from examples. The configs that I have created can be found in this repository in the .h5ad.zarr directories. More example configs are available on the [Vitessce Website](http://vitessce.io/examples/), by selecting an example and clicking "Edit" in the top right corner.
 
 ### Detailed Instructions
-I have uploaded further detailed instructions for config.JSON customisation as well as for constructing a config in R. These can be found at (STILL NEED TO FINISH THIS, this is where the detailed and potentially overwhelming amoutn of info will go.)
+I have uploaded further detailed instructions for config.JSON customisation as well as for constructing a config in R. These can be found at [Additional Documentation folder](https://github.com/esztersojtory/vitessce_data/tree/main/additional_documentation)
 
 
 ## Upload JSON
