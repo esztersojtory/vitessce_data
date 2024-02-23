@@ -237,4 +237,70 @@ The makers of Vitessce have communicated that a Colour Maps feature is going to 
 ### Layout
 
 The "layout" defines the layout of the widgets on the 12x12 canvas.
-The "x" and "y" define the coordinates of the left upper corner of the widget, whereas "w" and "h", the width and the height respectively.
+The "x" and "y" define the coordinates of the left upper corner of the widget, whereas "w" and "h", the width and the height respectively:
+
+```
+  "layout": [
+    {
+      "component": "scatterplot",
+      "coordinationScopes": {
+        "dataset": "A",
+        "embeddingType": "A",
+        "featureValueColormapRange": "A",
+        "obsSetColor": "A"
+      },
+      "x": 0,
+      "y": 0,
+      "w": 6,
+      "h": 12
+    },
+    {
+      "component": "description",
+      "coordinationScopes": {
+        "dataset": "A"
+      },
+      "x": 6,
+      "y": 6,
+      "w": 6,
+      "h": 3,
+      "props": {
+        "description": "Visualisation based on Fig. 3 from Kirchberger and Shoeb et al. 2024: scRNA-seq of zebrafish neutrophils reveals a continous maturation process. UMAP of scRNA-seq data ( n=18,150 cells) showing FACS-sorted neutrophil populations (lysC+/mmp9 = NO, INT, HI) and unsorted whole kidney marrow cells (WKM). Reference-based labelling of cell types by projecting cells to two zebrafish hematopoietic reference atlases in the same UMAP. The cluster with a high concentration of G2M phase cells is dominated by cell cycle effects."
+      }
+    },
+    {
+      "component": "featureList",
+      "coordinationScopes": {
+        "dataset": "A",
+        "obsSetColor": "A"
+      },
+      "x": 9,
+      "y": 0,
+      "w": 3,
+      "h": 3
+    },
+    {
+      "component": "obsSetSizes",
+      "coordinationScopes": {
+        "dataset": "A",
+        "obsSetColor": "A"
+      },
+      "x": 6,
+      "y": 0,
+      "w": 6,
+      "h": 6
+    },
+    {
+      "component": "obsSets",
+      "coordinationScopes": {
+        "dataset": "A",
+        "obsSetColor": "A"
+      },
+      "x": 6,
+      "y": 0,
+      "w": 3,
+      "h": 3
+    }
+  ],
+  "initStrategy": "auto"
+}
+```
