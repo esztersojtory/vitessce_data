@@ -40,7 +40,9 @@ library(vitessceR)
 library(vitessceAnalysisR)
 ```
 
-Transform to zarr store (.h5ad.zarr) (making sure that the adatapath directory exists prior to running):
+Transform to zarr store (.h5ad.zarr):
+
+**Important**: Make sure that the adatapath directory exists prior to running, otherwise it gives random errors
 
 ```r
 adata_path <- file.path("data", "example", "example.h5ad.zarr")
